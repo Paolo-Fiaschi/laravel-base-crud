@@ -16,6 +16,7 @@ class CreateCagnoliniTable extends Migration
         Schema::create('cagnolini', function (Blueprint $table) {
             $table->id();
 
+            $table->string('img');
             $table->string('nome');
             $table->string('tipo');
             $table->decimal('altezza', 4, 2);
