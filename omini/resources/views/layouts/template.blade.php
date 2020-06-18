@@ -18,7 +18,7 @@
     <body>
         <header>
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     @include('components.header')
                 </div>
             </div>

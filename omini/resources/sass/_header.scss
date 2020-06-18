@@ -1,3 +1,9 @@
 header{
     width: 100%;
+    min-height: 5vh;
+    .fixed-top{
+        background-color: cadetblue;
+        width: 100%;
+    }
 }
+
