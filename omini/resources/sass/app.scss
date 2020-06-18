@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Header
+@import 'header';
+
+// Home
+@import 'home';
+
+// ShowOmino
+@import 'showOmino';
+
+// Footer
+@import 'footer';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    min-height: 50vh;
+    width: 100%;
+}
