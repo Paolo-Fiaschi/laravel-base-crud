@@ -6,12 +6,13 @@
                 <h1>Omini</h1>
             </div>
             <div class="col">
+                <button><a href="{{route('create')}}">CREATE NEW USER</a></button>
                 <ol>
                     @foreach ($omini as $omino)
                        <li class="userList">
                             <span>User:</span>
                             <a href="{{route('showOmino', $omino['id'])}}" class="user">
-                                {{$omino['first name']}} {{$omino['last name']}}
+                                {{$omino['firstname']}} {{$omino['lastname']}}
                             </a>
                         </li>
                     @endforeach

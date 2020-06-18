@@ -16,12 +16,12 @@ class CreateOminiTable extends Migration
         Schema::create('omini', function (Blueprint $table) {
             $table->id();
 
-            $table->string('first name');
-            $table->string('last name');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('address');
             $table->string('code');
             $table->string('state');
-            $table->string('phone number');
+            $table->string('phoneNumber');
             $table->string('role');
 
             $table->timestamps();

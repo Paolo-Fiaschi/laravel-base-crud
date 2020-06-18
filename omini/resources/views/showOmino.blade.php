@@ -7,11 +7,11 @@
         <ul>
             <li>
                 <span class="userLable">FIRST NAME:</span>
-                <span class="userInfo">{{$omino['first name']}}</span>
+                <span class="userInfo">{{$omino['firstname']}}</span>
             </li>
             <li>
                 <span class="userLable">LAST NAME:</span>
-                <span class="userInfo">{{$omino['last name']}}</span>
+                <span class="userInfo">{{$omino['lastname']}}</span>
             </li>
             <li>
                 <span class="userLable">ADDRESS:</span>
@@ -27,7 +27,7 @@
             </li>
             <li>
                 <span class="userLable">PHONE NUMBER:</span>
-                <span class="userInfo">{{$omino['phone number']}}</span>
+                <span class="userInfo">{{$omino['phoneNumber']}}</span>
             </li>
             <li>
                 <span class="userLable">ROLE:</span>
@@ -37,7 +37,7 @@
     </div>
     <div>
         <button><a href="{{route('delete', $omino['id'])}}">DELETE</a></button>
-        <button type="submit">CHANGE</button>
+        <button><a href="{{route('edit', $omino['id'])}}">CHANGE</a></button>
     </div>
 </div>
 
