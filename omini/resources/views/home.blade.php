@@ -6,6 +6,9 @@
                 <h1>Omini</h1>
             </div>
             <div class="col">
+                @if (session('success'))
+                <h3>{{session('success')}}</h3>
+                @endif
                 <div>
                     <ol>
                         <div class="userTitle">

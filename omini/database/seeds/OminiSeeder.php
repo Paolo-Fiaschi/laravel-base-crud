@@ -11,6 +11,6 @@ class OminiSeeder extends Seeder
      */
     public function run()
     {
-        factory(Omino::class, 50) -> create();
+        factory(Omino::class, 100) -> create();
     }
 }

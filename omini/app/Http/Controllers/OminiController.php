@@ -21,7 +21,9 @@ class OminiController extends Controller
     {
         $omino = Omino::findOrFail($id);
         $omino -> delete();
-        return redirect() -> route('home');
+        return redirect()
+                    -> route('home')
+                    -> withSuccess('User delete succesfully');
     }
     public function create()
     {
@@ -30,21 +32,33 @@ class OminiController extends Controller
     }
     public function store(Request $request)
     {
-        $data = $request -> all();
+        $validateData = $request -> validate([
+            'firstname' => 'required|regex:/^[\pL\s\-]+$/u',
+            'lastname' => 'required|regex:/^[\pL\s\-]+$/u',
+            'phoneNumber' => 'required',
+            'address' => 'required',
+            'code' => 'required|numeric',
+            'state' => 'required',
+            'role' => 'required'
+        ]);
 
         $omino = new Omino;
 
-        $omino -> firstname = $data['firstname'];
-        $omino -> lastname = $data['lastname'];
-        $omino -> phoneNumber = $data['phoneNumber'];
-        $omino -> address = $data['address'];
-        $omino -> code = $data['code'];
-        $omino -> state = $data['state'];
-        $omino -> role = $data['role'];
+        $omino -> firstname = $validateData['firstname'];
+        $omino -> lastname = $validateData['lastname'];
+        $omino -> phoneNumber = $validateData['phoneNumber'];
+        $omino -> address = $validateData['address'];
+        $omino -> code = $validateData['code'];
+        $omino -> state = $validateData['state'];
+        $omino -> role = $validateData['role'];
 
         $omino -> save();
 
-        return redirect() -> route('home');
+        return redirect()
+                        -> route('home')
+                        -> withSuccess($validateData['firstname']
+                                    . ' '
+                                    . 'created succesfully');
     }
     public function edit($id)
     {
@@ -54,20 +68,34 @@ class OminiController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $data = $request -> all();
+        $validateData = $request -> validate([
+            'firstname' => 'required|regex:/^[\pL\s\-]+$/u',
+            'lastname' => 'required|regex:/^[\pL\s\-]+$/u',
+            'phoneNumber' => 'required',
+            'address' => 'required',
+            'code' => 'required|numeric',
+            'state' => 'required',
+            'role' => 'required'
+        ]);
         $omino = Omino::findOrFail($id);
 
-        $omino -> firstname = $data['firstname'];
-        $omino -> lastname = $data['lastname'];
-        $omino -> phoneNumber = $data['phoneNumber'];
-        $omino -> address = $data['address'];
-        $omino -> code = $data['code'];
-        $omino -> state = $data['state'];
-        $omino -> role = $data['role'];
+        $omino -> firstname = $validateData['firstname'];
+        $omino -> lastname = $validateData['lastname'];
+        $omino -> phoneNumber = $validateData['phoneNumber'];
+        $omino -> address = $validateData['address'];
+        $omino -> code = $validateData['code'];
+        $omino -> state = $validateData['state'];
+        $omino -> role = $validateData['role'];
 
         $omino -> save();
 
-        return redirect() -> route('home');
+        return redirect()
+                    -> route('home')
+                    -> withSuccess('Update'
+                                . ' '
+                                . $validateData['firstname']
+                                . ' '
+                                . 'succesfully');
 
 
     }

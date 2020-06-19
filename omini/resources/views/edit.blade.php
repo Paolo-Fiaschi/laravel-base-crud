@@ -4,6 +4,15 @@
     <div class="row flex-column">
         <h1>Change Omino</h1>
         <div class="col-6">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <form action="{{route('update', $omino['id'])}}" method="post">
                 @csrf
                 @method('POST')
