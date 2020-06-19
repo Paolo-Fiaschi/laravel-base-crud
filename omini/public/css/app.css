@@ -10947,6 +10947,8 @@ ol {
   padding: 35px;
   list-style-type: none;
   background-image: url(https://i.redd.it/qwd83nc4xxf41.jpg);
+  border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 ol .userTitle {

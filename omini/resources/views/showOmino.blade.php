@@ -38,12 +38,11 @@
                 </ul>
                 <div class="row justify-content-center align-items-center">
                     <div class="col-7">
-                        <button><a href="{{route('delete', $omino['id'])}}">DELETE</a></button>
+                        <button class="delete"><a href="{{route('delete', $omino['id'])}}">DELETE</a></button>
                         <button><a href="{{route('edit', $omino['id'])}}">CHANGE</a></button>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
