@@ -1,9 +1,11 @@
 @extends('layouts.template')
 @section('content')
 <div class="container">
-    <div class="row flex-column">
-        <h1>Change Omino</h1>
-        <div class="col-6">
+    <div class="row flex-column align-items-center">
+        <div class="col-12 mt-5 mb-5">
+            <h1>Change Omino</h1>
+        </div>
+        <div class="col-7">
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -30,7 +32,7 @@
                 <input type="text" name="phoneNumber" value="{{$omino['phoneNumber']}}">
                 <label for="role">ROLE:</label>
                 <input type="text" name="role" value="{{$omino['role']}}">
-                <input type="submit" value="SUBMIT">
+                <input type="submit" value="SUBMIT" class="submit">
             </form>
         </div>
     </div>

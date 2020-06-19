@@ -30,4 +30,10 @@
 main{
     min-height: 90vh;
     width: 100%;
+    .succesfull{
+        font-weight: bolder;
+        color: red;
+        text-align: center;
+        padding: 20px;
+    }
 }

@@ -10994,11 +10994,55 @@ ol .userList .user {
   font-weight: bold;
 }
 
-.container-content {
+.ominoInfoList {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: lightblue;
+  margin-bottom: 50px;
+}
+
+.ominoInfoList ul {
+  list-style-type: none;
+}
+
+.ominoInfoList ul li span {
+  display: block;
+  font-size: 16px;
+}
+
+.ominoInfoList ul .userLable {
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.ominoInfoList ul .userInfo {
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.ominoInfoList button {
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid darkcyan;
+  width: 160px;
+  background-color: cadetblue;
+  box-shadow: 1px 5px 8px black;
+  height: 50px;
+  font-size: 18px;
+}
+
+.ominoInfoList button:hover {
+  box-shadow: none;
+}
+
+.ominoInfoList button a {
+  text-decoration: none;
+  color: white;
 }
 
 form {
@@ -11008,6 +11052,19 @@ form {
   border-radius: 5px;
   border: 1px solid black;
   background-color: lightblue;
+  margin-bottom: 50px;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+form input {
+  padding-left: 10px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
 }
 
 form .submit {
@@ -11028,9 +11085,18 @@ form .submit:hover {
 }
 
 footer {
-  min-height: 5vh;
+  min-height: 200px;
   background-color: #3490dc;
   width: 100%;
+  color: #f8fafc;
+  background-color: #363D47;
+}
+
+footer .footerList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 * {
@@ -11042,5 +11108,12 @@ footer {
 main {
   min-height: 90vh;
   width: 100%;
+}
+
+main .succesfull {
+  font-weight: bolder;
+  color: red;
+  text-align: center;
+  padding: 20px;
 }
 

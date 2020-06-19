@@ -7,7 +7,7 @@
             </div>
             <div class="col">
                 @if (session('success'))
-                <h3>{{session('success')}}</h3>
+                <h3 class="succesfull">{{session('success')}}</h3>
                 @endif
                 <div>
                     <ol>

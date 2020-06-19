@@ -23,7 +23,7 @@ class OminiController extends Controller
         $omino -> delete();
         return redirect()
                     -> route('home')
-                    -> withSuccess('User delete succesfully');
+                    -> withSuccess('USER DELETE SUCCESFULLY');
     }
     public function create()
     {
@@ -58,7 +58,9 @@ class OminiController extends Controller
                         -> route('home')
                         -> withSuccess($validateData['firstname']
                                     . ' '
-                                    . 'created succesfully');
+                                    . $validateData['lastname']
+                                    . ' '
+                                    . 'CREATED SUCCESFULLY');
     }
     public function edit($id)
     {
@@ -91,11 +93,9 @@ class OminiController extends Controller
 
         return redirect()
                     -> route('home')
-                    -> withSuccess('Update'
+                    -> withSuccess($validateData['firstname']
                                 . ' '
-                                . $validateData['firstname']
-                                . ' '
-                                . 'succesfully');
+                                . 'UPDATE SUCCESFULLY');
 
 
     }
